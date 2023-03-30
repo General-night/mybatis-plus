@@ -1,7 +1,7 @@
 package com.qc.mp.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_user")
+//@TableName("t_user")
 public class User {
 
     /**
@@ -27,6 +27,7 @@ public class User {
     @TableId
     private Long id;
 
+    @TableField("user_name")
     private String name;
 
     /**
@@ -35,4 +36,6 @@ public class User {
     private Integer age;
 
     private String email;
+
+    private Integer isDeleted;
 }
