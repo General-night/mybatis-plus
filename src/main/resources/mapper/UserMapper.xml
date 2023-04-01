@@ -7,4 +7,9 @@
     <select id="selectMap" resultType="java.util.Map">
         select * from t_user where id
     </select>
+
+    <!--IPage<User> selectPageVo(@Param("page") IPage<User> iPage, @Param("age") Integer age);-->
+    <select id="selectPageVo" resultType="com.qc.mp.entity.User">
+        select * from t_user where is_deleted = 0 and age > #{age}
+    </select>
 </mapper>

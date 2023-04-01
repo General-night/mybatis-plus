@@ -2,6 +2,7 @@ package com.qc.mp.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.qc.mp.enums.SexEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -38,4 +39,6 @@ public class User {
     private String email;
 
     private Integer isDeleted;
+    
+    private SexEnum sex;
 }
